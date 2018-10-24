@@ -4,19 +4,21 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node webpack.dev.server.js & ./node_modules/.bin/nodemon .",
-    "pretest": "jshint ."
+    "pretest": "jshint .",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "async": "^1.5.2",
-    "babel": "^5.6.14",
-    "babel-core": "^5.6.15",
+    "babel": "^6.0.0",
+    "babel-core": "^6.10.4",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "compression": "^1.0.3",
     "consolidate": "^0.13.1",
     "cors": "^2.5.2",
     "flux": "^2.0.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-notify": "^2.2.0",
     "gulp-util": "^3.0.7",
     "handlebars": "^4.0.5",
@@ -27,14 +29,15 @@
     "loopback-component-explorer": "^2.1.0",
     "loopback-connector-postgresql": "^2.4.0",
     "loopback-datasource-juggler": "^2.39.0",
-    "rc": "~0.5.0",
+    "rc": "~1.2.7",
     "react": "^0.13.0",
     "react-router": "^0.13.0",
     "reactify": "^1.1.1",
     "serve-favicon": "^2.0.1",
     "underscore": "^1.8.3",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "snyk": "^1.104.2"
   },
   "devDependencies": {
     "babel-loader": "^6.2.2",
@@ -48,5 +51,6 @@
     "type": "",
     "url": ""
   },
-  "description": "loopback-isomorphic-react-flux"
+  "description": "loopback-isomorphic-react-flux",
+  "snyk": true
 }
